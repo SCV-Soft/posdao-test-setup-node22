@@ -9,7 +9,7 @@ const SnS = require('../utils/signAndSendTx.js');
 const sendRequest = require('../utils/sendRequest.js');
 const web3 = new Web3('http://localhost:8541');
 web3.eth.transactionConfirmationBlocks = 1;
-web3.eth.transactionPollingTimeout = 30;
+web3.eth.transactionPollingTimeout = 300;
 const BN = web3.utils.BN;
 const BlockRewardAuRa = require(path.join(__dirname, '../utils/getContract'))('BlockRewardAuRa', web3);
 const StakingAuRa = require(path.join(__dirname, '../utils/getContract'))('StakingAuRa', web3);
@@ -95,12 +95,12 @@ async function main() {
             data
         };
     }
-    const txHash = await sendRequest(`curl --data '{"method":"eth_sendTransaction","params":[${JSON.stringify(txParams)}],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST ${web3.currentProvider.host} 2>/dev/null`);
+    /*const txHash = await sendRequest(`curl --data '{"method":"eth_sendTransaction","params":[${JSON.stringify(txParams)}],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST ${web3.currentProvider.host} 2>/dev/null`);
     let stakingTokenDeployTxReceipt;
     while(!(stakingTokenDeployTxReceipt = await sendRequest(`curl --data '{"method":"eth_getTransactionReceipt","params":["${txHash}"],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST ${web3.currentProvider.host} 2>/dev/null`))) {
         await sleep(500);
-    }
-    /*
+    }*/
+    
     // Deploy using eth_sendRawTransaction
     const stakingTokenDeploy = await contract.deploy({
         data: '0x' + bytecode,
@@ -112,7 +112,7 @@ async function main() {
         gasLimit: '4700000',
         gasPrice: '0'
     });
-    */
+    
     const StakingTokenInstance = new web3.eth.Contract(abi, stakingTokenDeployTxReceipt.contractAddress);
 
     let address = StakingTokenInstance.options.address;

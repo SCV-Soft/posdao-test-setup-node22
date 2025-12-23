@@ -3,6 +3,7 @@ const path = require('path');
 const SnS = require('../utils/signAndSendTx.js');
 const web3 = new Web3('http://localhost:8541');
 web3.eth.transactionConfirmationBlocks = 1;
+web3.eth.transactionPollingTimeout = 3000;
 const BN = web3.utils.BN;
 const ValidatorSetAuRa = require(path.join(__dirname, '../utils/getContract'))('ValidatorSetAuRa', web3);
 const expect = require('chai')

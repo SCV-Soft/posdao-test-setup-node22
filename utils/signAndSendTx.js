@@ -18,7 +18,7 @@ const sign2718Transaction = require('./sign2718Tx.js');
  * Returns sendSignedTransaction promise.
 */
 
-const DEBUG=false;
+const DEBUG=true;
 const dbg = DEBUG? function dbg(...msg) { console.log(...msg) } : function () {};
 
 const keysDir = path.join(__dirname, '../accounts/');

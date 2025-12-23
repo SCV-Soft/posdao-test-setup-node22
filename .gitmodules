@@ -1,4 +1,4 @@
 [submodule "posdao-contracts"]
 	path = posdao-contracts
-	url = https://github.com/poanetwork/posdao-contracts
+	url = https://github.com/SCV-Soft/posdao-contracts-node22
 	branch = master
