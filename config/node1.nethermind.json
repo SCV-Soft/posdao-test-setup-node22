@@ -1,13 +1,12 @@
 {
   "Init": {
     "WebSocketsEnabled": true,
-    "StoreReceipts" : true,
+    "StoreReceipts": true,
     "IsMining": true,
     "ChainSpecPath": "./data/spec.json",
     "BaseDbPath": "./data/node1",
     "LogDirectory": "./data/node1",
-    "LogFileName": "nethermind.logs.txt",
-    "StaticNodesPath": "./data/reserved-peers"
+    "LogFileName": "nethermind.logs.txt"
   },
   "Network": {
     "DiscoveryPort": 30301,
@@ -31,23 +30,28 @@
   "Sync": {
     "FastSync": false
   },
-  "Aura":
-  {
+  "Aura": {
     "ForceSealing": true,
     "AllowAuRaPrivateChains": true,
     "TxPriorityContractAddress": "0x4100000000000000000000000000000000000000",
     "TxPriorityConfigFilePath": "./config/TxPriority1.json"
   },
-  "KeyStore":
-  {
+  "KeyStore": {
     "BlockAuthorAccount": "0xbbcaa8d48289bb1ffcf9808d9aa4b1d215054c78",
-    "PasswordFiles": ["./config/password"],
-    "UnlockAccounts": ["0xbbcaa8d48289bb1ffcf9808d9aa4b1d215054c78", "0x32e4e4c7c5d1cea5db5f9202a9e4d99e56c91a24"],
+    "PasswordFiles": [
+      "./config/password"
+    ],
+    "UnlockAccounts": [
+      "0xbbcaa8d48289bb1ffcf9808d9aa4b1d215054c78",
+      "0x32e4e4c7c5d1cea5db5f9202a9e4d99e56c91a24"
+    ],
     "KeyStoreDirectory": "./data/node1/keys/DPoSChain"
   },
-  "Mining":
-  {
+  "Mining": {
     "MinGasPrice": "1000000000",
     "TargetBlockGasLimit": "12000000"
+  },
+  "Discovery": {
+    "Bootnodes": "enode://c3a7ba87ac7030f3ca33b3a863b01f9b1fd1f9c9993138c6a6848e8fb081b8f69fd853edc0e7d3432b9d4f9ea4e2ed9dc0c96c8467c7a7c35329d97cd6eb1527@127.0.0.1:30300"
   }
 }

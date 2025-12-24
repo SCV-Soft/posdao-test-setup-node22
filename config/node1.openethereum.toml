@@ -6,7 +6,7 @@ base_path = "data/node1"
 port = 30301
 nat = "none"
 interface = "local"
-reserved_peers="data/reserved-peers"
+bootnodes = ["enode://c3a7ba87ac7030f3ca33b3a863b01f9b1fd1f9c9993138c6a6848e8fb081b8f69fd853edc0e7d3432b9d4f9ea4e2ed9dc0c96c8467c7a7c35329d97cd6eb1527@127.0.0.1:30300"]
 
 [rpc]
 cors = ["all"]

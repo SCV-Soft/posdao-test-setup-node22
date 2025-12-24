@@ -5,7 +5,7 @@ base_path = "data/node3"
 [network]
 port = 30303
 discovery = true
-reserved_peers="data/reserved-peers"
+bootnodes = ["enode://c3a7ba87ac7030f3ca33b3a863b01f9b1fd1f9c9993138c6a6848e8fb081b8f69fd853edc0e7d3432b9d4f9ea4e2ed9dc0c96c8467c7a7c35329d97cd6eb1527@127.0.0.1:30300","enode://184576eda877a9abe03e4092aa91e7ff801311deb54f09a64d451a3d1ff3a9acd4a48bdac2a16d62685901f347546f1542b9f3ae891c97b355ae18138d618793@127.0.0.1:30301","enode://58287ec086938c118e147902452a9efa64185fa82eda4cf44d24dbdee24afaf0c534b5d8cf9509c7be80ea3c1bd50c015bbd2a08c091b0f4274b3c8b229b3a58@127.0.0.1:30302"]
 nat = "none"
 interface = "local"
 

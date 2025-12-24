@@ -45,6 +45,7 @@ accounts/keystore/*
 /node_modules/
 
 build
+data
 
 #Mac OS specific
 .DS_Store
